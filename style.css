@@ -1,0 +1,383 @@
+/* Shared colours and type for the homepage */
+:root {
+  color-scheme: light;
+  font-family: Inter, Arial, sans-serif;
+  color: #101010;
+  background: #fff;
+  --pill: #f0f0f0;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; }
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 2px solid #101010; outline-offset: 4px; }
+
+.page-width {
+  width: min(1212px, 89%);
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+  transform: translateY(-150%);
+  padding: 10px 16px;
+  background: #fff;
+}
+.skip-link:focus { transform: none; }
+
+/* Rounded navigation from the Canva template */
+.site-header {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 2.26fr) 1fr;
+  align-items: center;
+  gap: 18px;
+  min-height: 112px;
+  padding: 22px 0 32px;
+  border-bottom: 2px solid #808080;
+}
+
+.wordmark {
+  justify-self: start;
+  padding-left: 8px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.site-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 24px;
+  min-height: 54px;
+  padding: 6px 16px;
+  border-radius: 32px;
+  background: var(--pill);
+  font-size: clamp(16px, 1.6vw, 22px);
+}
+
+.site-nav a { padding-block: 6px; }
+.site-nav a:hover { text-decoration: underline; text-underline-offset: 0.22em; }
+
+.pill {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 54px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: var(--pill);
+  font-size: clamp(16px, 1.46vw, 20px);
+  text-align: center;
+}
+.pill:hover { background: #dedede; }
+.contact-link { justify-self: end; min-width: min(195px, 100%); }
+
+/* The transparent portrait sits directly on the page */
+.home-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 392fr) minmax(0, 765fr);
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "portrait heading"
+    "portrait intro"
+    "actions actions";
+  column-gap: clamp(24px, 4vw, 55px);
+  min-height: min(656px, calc(100svh - 112px));
+  padding-block: 56px 42px;
+}
+
+.home-portrait {
+  grid-area: portrait;
+  align-self: start;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  margin-top: 30px;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.home-hero h1 {
+  grid-area: heading;
+  margin: 0;
+  font-size: clamp(23px, 2vw, 28px);
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.home-intro {
+  grid-area: intro;
+  align-self: start;
+  margin: clamp(40px, 9vw, 122px) 0 40px;
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.35;
+  letter-spacing: 0.075em;
+  text-align: center;
+}
+
+.home-actions {
+  grid-area: actions;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 36px;
+}
+.home-actions .pill { min-width: min(220px, 100%); }
+
+/* Wrap the menu and stack the content on smaller screens */
+@media (max-width: 1050px) {
+  .site-header { grid-template-columns: auto 1fr auto; }
+  .site-nav { gap: 4px 14px; }
+  .wordmark { padding-left: 0; font-size: 22px; }
+  .contact-link { min-width: 0; }
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    min-height: auto;
+    padding-block: 16px;
+  }
+  .site-nav { grid-column: 1 / -1; grid-row: 2; }
+  .contact-link { grid-column: 2; grid-row: 1; }
+  .home-hero {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "heading" "portrait" "intro" "actions";
+    justify-items: center;
+    gap: 22px;
+    min-height: auto;
+    padding-block: 36px;
+  }
+  .home-portrait { width: min(100%, 320px); margin: 0; }
+  .home-intro { max-width: 550px; margin: 0; letter-spacing: 0.02em; }
+  .home-actions { justify-content: center; gap: 12px; margin-top: 8px; }
+  .home-actions .pill { min-width: 0; }
+}
+
+/* Portrait uses the transparent PNG as supplied, with no visible frame. */
+.home-portrait { background: transparent; border: 0; }
+.home-portrait img { width: 100%; height: 100%; object-fit: contain; }
+
+/* About and Experience: image on the left, text on the right. */
+.split-page {
+  display: grid;
+  grid-template-columns: minmax(0, 392fr) minmax(0, 765fr);
+  grid-template-areas: "photo heading" "photo copy" "actions actions";
+  column-gap: clamp(24px, 4vw, 54px);
+  row-gap: 16px;
+  padding-block: 56px 42px;
+}
+.split-page > h1 { grid-area: heading; }
+.split-page > .photo { grid-area: photo; align-self: start; margin-top: 30px; }
+.split-copy { grid-area: copy; font-size: clamp(16px, 1.4vw, 20px); line-height: 1.5; }
+.split-copy ul { padding-inline-start: 1.2em; }
+.split-copy p { margin: 22px 0 0; }
+.about-page .split-copy p { text-align: center; }
+.experience-list li + li { margin-top: 10px; }
+.split-page > .home-actions { grid-area: actions; }
+.split-page h1, .gallery-page h1 {
+  margin: 0;
+  font-size: clamp(23px, 2vw, 28px);
+  line-height: 1.25;
+  text-align: center;
+}
+
+/* The neutral placeholders disappear when the named files are added. */
+.photo, .website-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 0;
+}
+.photo-empty {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 1px;
+  aspect-ratio: 1;
+  background: #f0f0f0;
+}
+.experience-gallery { grid-column: 1 / -1; max-width: 780px; width: 100%; margin: 30px auto 0; }
+.experience-gallery h2 { font-size: 22px; }
+.website-shot { aspect-ratio: 16 / 9; object-fit: contain; background: #f5f5f5; }
+.website-shot .photo-empty { aspect-ratio: 16 / 9; }
+
+/* Skills, hobbies and contact: an image beside each rounded panel. */
+.gallery-page { padding-block: 28px 42px; }
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px 36px;
+  margin-top: 18px;
+}
+.tile {
+  display: grid;
+  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 14px;
+}
+.tile-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 196px;
+  padding: clamp(12px, 1.4vw, 22px);
+  border-radius: 34px;
+  background: var(--pill);
+}
+.tile-copy h2 { margin: 0 0 8px; font-size: clamp(15px, 1.4vw, 19px); }
+.tile-copy p { margin: 0; font-size: 14px; line-height: 1.45; }
+.contact-page .tile-grid { margin-top: clamp(42px, 8vw, 110px); }
+
+@media (min-width: 1021px) {
+  .tile:nth-child(n+4) { padding-top: 22px; border-top: 1px solid #d5d5d5; }
+}
+@media (max-width: 1020px) {
+  .tile-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .split-page {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "heading" "photo" "copy" "actions";
+    gap: 20px;
+    padding-block: 36px;
+  }
+  .split-page > .photo { width: min(100%, 320px); margin: 0 auto; }
+  .split-copy ul { margin: 0; }
+  .tile-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .tile-copy { min-height: 140px; border-radius: 25px; }
+  .tile .photo { width: min(100%, 180px); justify-self: end; }
+}
+ 
+/* Long scrolling homepage */
+.scroll-panel {
+  min-height: min(768px, 100svh);
+  scroll-margin-top: 0;
+}
+.scroll-home .split-page {
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  min-height: min(656px, calc(100svh - 112px));
+}
+.scroll-home .split-page > .section-title { grid-area: heading; }
+.scroll-home .section-title {
+  margin: 0;
+  font-size: clamp(23px, 2vw, 28px);
+  line-height: 1.25;
+  text-align: center;
+}
+.scroll-home .tile-copy h3 {
+  margin: 0 0 8px;
+  font-size: clamp(15px, 1.4vw, 19px);
+}
+.scroll-home .split-copy {
+  letter-spacing: .045em;
+}
+.scroll-home .expandable-gallery:not(:target) { display: none; }
+.gallery-close { margin-top: 20px; }
+
+@media (max-width: 760px) {
+  .scroll-panel { min-height: auto; }
+  .scroll-home .split-page { grid-template-rows: auto; min-height: auto; }
+  .scroll-home .split-copy { letter-spacing: normal; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+/* Make the homepage portrait bigger on desktop */
+@media (min-width: 761px) {
+  .home-portrait {
+    transform: translate(40px, 190px) scale(1.5);
+    transform-origin: center bottom;
+  }
+}
+
+/* Keep the enlarged photo inside the homepage section */
+.home-hero {
+  overflow: clip;
+}
+
+/* Keep the portrait inside the hero */
+.home-hero {
+  overflow: clip;
+  isolation: isolate;
+}
+
+/* Put the photo behind the text */
+.home-hero .home-portrait {
+  position: relative;
+  z-index: 0;
+}
+
+/* Keep the text and buttons visible */
+.home-hero h1,
+.home-hero .home-intro,
+.home-hero .home-actions {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 760px) {
+  .home-hero {
+    gap: 16px;
+    padding-block: 28px;
+  }
+
+  .home-hero .home-portrait {
+    width: min(65vw, 220px);
+    height: auto;
+    aspect-ratio: auto;
+    margin: 0 auto;
+    transform: none;
+  }
+
+  .home-intro {
+    max-width: 34ch;
+    line-height: 1.5;
+  }
+}
+
+/* Internship photos and captions */
+.internship-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.internship-photo-grid figure {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #f0f0f0;
+}
+
+.internship-photo-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: #e8e8e8;
+}
+
+.internship-photo-grid figcaption {
+  padding: 14px 16px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .internship-photo-grid {
+    grid-template-columns: 1fr;
+  }
+}
