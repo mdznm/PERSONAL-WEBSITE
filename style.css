@@ -687,6 +687,11 @@ img[src="assets/gallery/2026/photo-5.jpg"] { object-position: 50% 50%; }
 .music-playlist-grid { column-gap: 44px; }
 .music-playlist-link,
 .music-artist-link { display: block; }
+.interest-example img.music-artist-cover {
+  aspect-ratio: 1;
+  object-fit: contain;
+  background: #f0f0f0;
+}
 .interest-detail-grid.music-square-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 56px 44px;
