@@ -425,7 +425,7 @@ img[src="assets/gallery/2024/photo-4.jpg"] { object-position: 50% 50%; }
 img[src="assets/gallery/2024/photo-5.jpg"] { object-position: 50% 50%; }
 
 /* 2025 */
-img[src="assets/gallery/2025/cover.jpg"]   { object-position: 50% 50%; }
+.memory-grid a[href="#gallery-2025"] img { object-fit: contain; object-position: 50% 50%; }
 img[src="assets/gallery/2025/photo-1.jpg"] { object-position: 50% 50%; }
 img[src="assets/gallery/2025/photo-2.jpg"] { object-position: 50% 50%; }
 img[src="assets/gallery/2025/photo-3.jpg"] { object-position: 50% 50%; }
@@ -433,7 +433,7 @@ img[src="assets/gallery/2025/photo-4.jpg"] { object-position: 50% 50%; }
 img[src="assets/gallery/2025/photo-5.jpg"] { object-position: 50% 50%; }
 
 /* 2026 */
-img[src="assets/gallery/2026/cover.jpg"]   { object-position: 50% 50%; }
+.memory-grid a[href="#gallery-2026"] img { object-fit: contain; object-position: 50% 50%; }
 img[src="assets/gallery/2026/photo-1.jpg"] { object-position: 50% 50%; }
 img[src="assets/gallery/2026/photo-2.jpg"] { object-position: 50% 50%; }
 img[src="assets/gallery/2026/photo-3.jpg"] { object-position: 50% 50%; }
