@@ -628,7 +628,11 @@ img[src="assets/gallery/2026/photo-5.jpg"] { object-position: 50% 50%; }
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
 }
-.interest-detail-grid.cooking-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.interest-detail-grid.cooking-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 56px 44px;
+  padding-inline: 18px;
+}
 
 .interest-example { margin: 0; }
 .interest-example figcaption { margin-top: 10px; font-weight: 600; }
@@ -677,3 +681,74 @@ img[src="assets/gallery/2026/photo-5.jpg"] { object-position: 50% 50%; }
 .interest-topic .interest-examples { border: 0; padding-top: 0; }
 .interest-topic .interest-examples h3 { font-size: 20px; margin: 0 0 17px; }
 .interest-topic .interest-back { margin: 20px 0 0; text-decoration: underline; text-underline-offset: 3px; }
+
+
+/* Music collections retain the existing interest-page typography. */
+.music-playlist-grid { column-gap: 44px; }
+.music-playlist-link,
+.music-artist-link { display: block; }
+.interest-detail-grid.music-square-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 56px 44px;
+  padding-inline: 18px;
+}
+.music-section + .music-section { margin-top: 86px; }
+.music-cover-placeholder {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+  background: linear-gradient(#beeafa, #f1fbfe 80%);
+}
+.music-playlist-grid .music-cover-placeholder { aspect-ratio: 1.86; }
+.music-cover-cloud {
+  position: absolute;
+  top: 21%;
+  left: 29%;
+  width: 42%;
+  height: 9%;
+  border-radius: 999px;
+  background: #fff;
+}
+.music-cover-cloud::before,
+.music-cover-cloud::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #fff;
+}
+.music-cover-cloud::before { width: 45%; left: 13%; }
+.music-cover-cloud::after { width: 56%; right: 12%; }
+.music-playlist-grid .music-cover-cloud { left: 39%; width: 24%; }
+.music-cover-hill { position: absolute; }
+.music-cover-hill-back {
+  width: 155%;
+  height: 35%;
+  bottom: -8%;
+  left: -37%;
+  border-radius: 50% 65% 0 0;
+  background: #c4df88;
+  transform: rotate(8deg);
+}
+.music-cover-hill-front {
+  width: 150%;
+  height: 31%;
+  bottom: -10%;
+  left: -9%;
+  border-radius: 65% 50% 0 0;
+  background: #8ba600;
+  transform: rotate(-8deg);
+}
+@media (max-width: 630px) {
+  .interest-detail-grid.music-square-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px 22px;
+    padding-inline: 0;
+  }
+  .interest-detail-grid.cooking-grid {
+    gap: 36px 22px;
+    padding-inline: 0;
+  }
+  .music-section + .music-section { margin-top: 60px; }
+}
