@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The personal website of Mohammad Nurhafizan, an Information Management student at UiTM Sarawak.">
+  <meta name="theme-color" content="#ffffff">
+  <title>My Interests | Mohammad Nurhafizan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Inter:wght@400;600;700&amp;display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header page-width">
+    <a class="wordmark" href="index.html"><img src="assets/branding/hafizan-wordmark.png" width="140" height="40" alt="Hafizan"></a>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="experience.html">Experience</a>
+      <a href="skills.html">Skills</a>
+      <a href="interest.html" aria-current="page">Interest</a>
+    </nav>
+
+    <a class="pill contact-link" href="contact.html">Contact Me</a>
+  </header>
+
+  <main id="main" class="page-width interests-page interest-index">
+    <h1>My Interests</h1>
+    <p class="interest-intro">In my free time, I like playing video games with friends, trying new recipes at home, and listening to music when I want to relax.</p>
+    <ul class="interest-thumbnails">
+      <li>
+        <a class="interest-card" href="#music">
+          <span class="interest-cover">
+            <img class="interest-cover-logo" src="assets/interest/music-cover.webp" width="3840" height="3840" alt="">
+          </span>
+          <span class="interest-name">Music</span>
+        </a>
+      </li>
+      <li>
+        <a class="interest-card" href="#video-games">
+          <span class="interest-cover">
+            <img class="interest-cover-logo" src="assets/interest/video-games-cover.png" width="512" height="512" alt="">
+          </span>
+          <span class="interest-name">Video Games</span>
+        </a>
+      </li>
+      <li>
+        <a class="interest-card" href="#cooking">
+          <span class="interest-cover">
+            <img src="assets/interest/cooking-cover.jpg" width="810" height="1080" alt="">
+          </span>
+          <span class="interest-name">Cooking</span>
+        </a>
+      </li>
+    </ul>
+
+    <section class="interest-topic" id="music" aria-labelledby="music-heading">
+      <h2 id="music-heading">Listening to Music</h2>
+      <p class="interest-lede">I listen to music when I want to relax or keep myself company while doing other things. What I play usually depends on my mood.</p>
+      <section class="interest-examples" aria-labelledby="music-examples">
+        <h3 id="music-examples">My Playlist</h3>
+        <div class="interest-detail-grid">
+          <figure class="interest-example">
+            <div class="interest-placeholder">Playlist cover</div>
+            <figcaption>Playlist name
+              <p>A few songs or artists I listen to.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <a href="#main" class="interest-back">↑ Back to My Interests</a>
+    </section>
+
+    <section class="interest-topic" id="video-games" aria-labelledby="video-games-heading">
+      <h2 id="video-games-heading">Playing Video Games</h2>
+      <p class="interest-lede">I enjoy playing video games in my free time. It’s a way for me to relax after a busy day, and I like the feeling of getting better at a game the more I play.</p>
+      <section class="interest-examples" aria-labelledby="video-games-examples">
+        <h3 id="video-games-examples">Games I Play</h3>
+        <div class="interest-detail-grid">
+          <figure class="interest-example">
+            <img src="assets/interest/fc26.jpg" width="1600" height="900"
+                 alt="FC 26 artwork with two footballers walking onto the pitch">
+            <figcaption>FC 26
+              <p>I always play FC 26 with my friends. Beating them is my favorite part.</p>
+            </figcaption>
+          </figure>
+          <figure class="interest-example">
+            <img src="assets/interest/roblox.png" width="1920" height="1080"
+                 alt="Roblox logo surrounded by scenes from different games">
+            <figcaption>Roblox
+              <p>I play horror games on Roblox with my friends. Getting scared together is half the fun.</p>
+            </figcaption>
+          </figure>
+          <figure class="interest-example">
+            <img src="assets/interest/gta5.jpg" width="1920" height="1080"
+                 alt="Grand Theft Auto V cover art with characters and vehicles">
+            <figcaption>GTA 5
+              <p>I play GTA Online with my friends. I like teaming up and figuring out how to finish missions together.</p>
+            </figcaption>
+          </figure>
+          <figure class="interest-example">
+            <img src="assets/interest/valorant.png" width="800" height="450"
+                 alt="Valorant artwork featuring Viper against a red background">
+            <figcaption>Valorant
+              <p>I’m still getting the hang of Valorant. My friends always carry me, haha.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <a href="#main" class="interest-back">↑ Back to My Interests</a>
+    </section>
+
+    <section class="interest-topic" id="cooking" aria-labelledby="cooking-heading">
+      <h2 id="cooking-heading">Cooking</h2>
+      <p class="interest-lede">I enjoy making meals at home and trying different recipes. I like seeing how a dish turns out, especially when it’s something I’m making for the first time.</p>
+      <section class="interest-examples" aria-labelledby="cooking-examples">
+        <h3 id="cooking-examples">Dishes I’ve Made</h3>
+        <div class="interest-detail-grid cooking-grid">
+          <figure class="interest-example">
+            <object class="cooking-photo" data="assets/interest/cooking1.jpg" type="image/jpeg" role="img" aria-label="Home cooking">
+              <span class="interest-placeholder" aria-hidden="true">Dish photo</span>
+            </object>
+            <figcaption>A meal from my kitchen.</figcaption>
+          </figure>
+          <figure class="interest-example">
+            <object class="cooking-photo" data="assets/interest/cooking2.jpg" type="image/jpeg" role="img" aria-label="Home cooking">
+              <span class="interest-placeholder" aria-hidden="true">Dish photo</span>
+            </object>
+            <figcaption>Another dish I made at home.</figcaption>
+          </figure>
+          <figure class="interest-example">
+            <object class="cooking-photo" data="assets/interest/cooking3.jpg" type="image/jpeg" role="img" aria-label="Home cooking">
+              <span class="interest-placeholder" aria-hidden="true">Dish photo</span>
+            </object>
+            <figcaption>A recipe I tried.</figcaption>
+          </figure>
+          <figure class="interest-example">
+            <object class="cooking-photo" data="assets/interest/cooking4.jpg" type="image/jpeg" role="img" aria-label="Home cooking">
+              <span class="interest-placeholder" aria-hidden="true">Dish photo</span>
+            </object>
+            <figcaption>A homemade meal.</figcaption>
+          </figure>
+          <figure class="interest-example">
+            <object class="cooking-photo" data="assets/interest/cooking5.jpg" type="image/jpeg" role="img" aria-label="Home cooking">
+              <span class="interest-placeholder" aria-hidden="true">Dish photo</span>
+            </object>
+            <figcaption>Something I cooked at home.</figcaption>
+          </figure>
+          <figure class="interest-example">
+            <object class="cooking-photo" data="assets/interest/cooking6.jpg" type="image/jpeg" role="img" aria-label="Home cooking">
+              <span class="interest-placeholder" aria-hidden="true">Dish photo</span>
+            </object>
+            <figcaption>Another moment from my kitchen.</figcaption>
+          </figure>
+        </div>
+      </section>
+      <a href="#main" class="interest-back">↑ Back to My Interests</a>
+    </section>
+  </main>
+</body>
+</html>
