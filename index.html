@@ -8,274 +8,346 @@
   <title>Home | Mohammad Nurhafizan</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Inter:wght@400;600;700&amp;display=swap">
   <link rel="stylesheet" href="style.css">
+  <script>
+    const sectionPages = new Map([
+      ["#about", "about.html"],
+      ["#experience", "experience.html"],
+      ["#internship-photos", "experience.html#internship-photos"],
+      ["#school-website", "experience.html#school-website"],
+      ["#skills", "skills.html"],
+      ["#interest", "interest.html"],
+      ["#contact", "contact.html"]
+    ]);
+
+    // Forward bookmarks from the original one-page site.
+    function openLegacySection() {
+      const page = sectionPages.get(window.location.hash);
+      if (page) window.location.replace(page);
+    }
+
+    openLegacySection();
+    window.addEventListener("hashchange", openLegacySection);
+  </script>
 </head>
-<body>Í
+<body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <main class="scroll-home">
-    <!-- Home -->
-    <section id="home" class="scroll-panel scroll-panel--home" aria-labelledby="home-heading">
-      <header class="site-header page-width">
-    <a class="wordmark" href="#home">Nurhafizan</a>
 
-    <nav class="site-nav" aria-label="Home navigation">
-      <a href="#home" aria-current="location">Home</a>
-      <a href="#about">About Me</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#hobby">Hobby</a>
+  <header id="home" class="site-header page-width">
+    <a class="wordmark" href="index.html"><img src="assets/branding/hafizan-wordmark.png" width="140" height="40" alt="Hafizan"></a>
+
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="experience.html">Experience</a>
+      <a href="skills.html">Skills</a>
+      <a href="interest.html">Interest</a>
     </nav>
 
-    <a class="pill contact-link" href="#contact">Contact Me</a>
+    <a class="pill contact-link" href="contact.html">Contact Me</a>
   </header>
-      <div class="home-hero page-width" id="main" tabindex="-1">
-    <!-- Add your transparent PNG as assets/myprofile-cutout.png. -->
-    <object class="home-portrait" data="assets/myprofile-cutout.png" type="image/png" role="img" aria-label="Portrait of Mohammad Nurhafizan">
-      <img src="assets/portrait-placeholder.svg" alt="Portrait placeholder" width="392" height="392">
-    </object>
 
-    <h1 id="home-heading">Welcome to my Personal Website</h1>
-
-    <p class="home-intro">
-      I'm Mohammad Nurhafizan, a student who likes learning new things, trying out ideas,
-      and figuring out how things work. I like the feeling of looking back and realising
-      I can do something I once found difficult. I like to keep learning and use what
-      I know to make something useful for others.
-    </p>
-
-    <div class="home-actions">
-      <a class="pill" href="#about">A little about Me</a>
-      <a class="pill" href="#experience">Explore my Work</a>
-    </div>
+  <main id="main" tabindex="-1">
+    <section class="home-hero page-width" aria-labelledby="home-heading">
+      <h1 id="home-heading">Hafizan’s Life</h1>
+      <img class="home-portrait" src="assets/home/myprofile-cutout.png" width="1081" height="2428"
+           alt="Portrait of Mohammad Nurhafizan" fetchpriority="high">
+      <div class="home-copy">
+        <p class="home-intro">
+          I’m Mohammad Nurhafizan, a student who likes learning new things, trying out ideas,
+          and figuring out how things work. I like the feeling of looking back and realising
+          I can do something I once found difficult. I like to keep learning and use what
+          I know to make something useful for others.
+        </p>
+        <p class="home-welcome">
+          Welcome to my personal website! Here, you’ll find a little about me, what I’ve worked on,
+          and the things I enjoy in my free time.
+        </p>
+        <div class="home-actions">
+          <a class="pill" href="about.html">A little about Me</a>
+          <a class="pill" href="experience.html">Explore my Work</a>
+        </div>
       </div>
     </section>
 
-    <!-- About Me -->
-    <section id="about" class="scroll-panel scroll-panel--about" aria-labelledby="about-heading">
-      <header class="site-header page-width">
-    <a class="wordmark" href="#home">Nurhafizan</a>
-
-    <nav class="site-nav" aria-label="About Me navigation">
-      <a href="#home">Home</a>
-      <a href="#about" aria-current="location">About Me</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#hobby">Hobby</a>
-    </nav>
-
-    <a class="pill contact-link" href="#contact">Contact Me</a>
-  </header>
-      <div class="page-width split-page about-page">
-    <h2 id="about-heading" class="section-title">About Me</h2>
-    <object class="photo " data="assets/about.jpg" type="image/jpeg" role="img" aria-label="Mohammad Nurhafizan"><span class="photo-empty" aria-hidden="true"></span></object>
-    <div class="split-copy">
-      <ul>
-        <li><strong>Name:</strong> Mohammad Nurhafizan Bin Abdullah</li>
-        <li><strong>Secondary school:</strong> Sekolah Menengah Kebangsaan Inanam</li>
-        <li><strong>Currently studying:</strong> Diploma in Information Management at UiTM, Samarahan Campus, Sarawak</li>
-        <li><strong>Hobbies:</strong> Cooking at home, listening to music and playing video games</li>
-        <li><strong>Personal interests:</strong> Learning new skills, trying new things, travelling, and starting my own business one day</li>
+    <section id="gallery" class="memory-gallery page-width" aria-labelledby="gallery-heading" tabindex="-1">
+      <h2 id="gallery-heading">Gallery</h2>
+      <p>A collection of memories and special moments from 2022 to 2026. Sample photos shown.</p>
+      <ul class="memory-grid">
+        <li>
+          <a href="#gallery-2022" aria-label="2022 photos">
+            <img src="assets/gallery/2022/cover.jpg" width="236" height="236" alt="" loading="lazy">
+            <span>2022</span>
+          </a>
+        </li>
+        <li>
+          <a href="#gallery-2023" aria-label="2023 photos">
+            <img src="assets/gallery/2023/cover.jpg" width="236" height="236" alt="" loading="lazy">
+            <span>2023</span>
+          </a>
+        </li>
+        <li>
+          <a href="#gallery-2024" aria-label="2024 photos">
+            <img src="assets/gallery/2024/cover.jpg" width="236" height="236" alt="" loading="lazy">
+            <span>2024</span>
+          </a>
+        </li>
+        <li>
+          <a href="#gallery-2025" aria-label="2025 photos">
+            <img src="assets/gallery/2025/cover.jpg" width="236" height="236" alt="" loading="lazy">
+            <span>2025</span>
+          </a>
+        </li>
+        <li>
+          <a href="#gallery-2026" aria-label="2026 photos">
+            <img src="assets/gallery/2026/cover.jpg" width="236" height="236" alt="" loading="lazy">
+            <span>2026</span>
+          </a>
+        </li>
       </ul>
-      <p>I’m a student who loves learning new things and improving my skills. I’m interested in technology, information management and business. My goal is to continue my studies, build a successful future and make my parents proud.</p>
-    </div>
-    <div class="home-actions"><a class="pill" href="#experience">Experience</a><a class="pill" href="#skills">Skills</a><a class="pill" href="assets/resume.pdf">My Resume</a></div>
-      </div>
-    </section>
 
-    <!-- Experience -->
-    <section id="experience" class="scroll-panel scroll-panel--experience" aria-labelledby="experience-heading">
-      <header class="site-header page-width">
-    <a class="wordmark" href="#home">Nurhafizan</a>
+      <section class="year-album" id="gallery-2022" aria-labelledby="gallery-heading-2022" tabindex="-1">
+        <h3 id="gallery-heading-2022">2022 Photos</h3>
+        <div class="photo-grid">
+          <figure>
+            <img src="assets/gallery/2022/photo-1.jpg"
+                 alt="Palm trees beside a beach at sunset" loading="lazy">
+            <figcaption>selfie with my friends</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/2022/photo-2.jpg"
+                 alt="A lit building reflected in a river at dusk" loading="lazy">
+            <figcaption>View Bukit Botak</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/2022/photo-3.jpg"
+                 alt="Grilled fish, rice and side dishes" loading="lazy">
+            <figcaption>Escape Class lol</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/2022/photo-4.jpg"
+                 alt="A shaded walkway lined with trees" loading="lazy">
+            <figcaption>Poser photographer</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/2022/photo-5.jpg"
+                 alt="Fresh fruit at a market stall" loading="lazy">
+            <figcaption>Program outside the School</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/2022/photo-6.jpg"
+                 alt="Fresh fruit at a market stall" loading="lazy">
+            <figcaption>Program outside the School</figcaption>
+          </figure>
+        </div>
+        <a class="pill gallery-close" href="#gallery">Back to Gallery</a>
+      </section>
 
-    <nav class="site-nav" aria-label="Experience navigation">
-      <a href="#home">Home</a>
-      <a href="#about">About Me</a>
-      <a href="#experience" aria-current="location">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#hobby">Hobby</a>
-    </nav>
+      <section class="year-album compact-album" id="gallery-2023" aria-labelledby="gallery-heading-2023" tabindex="-1">
+        <h3 id="gallery-heading-2023">2023 Photos</h3>
+        <div class="photo-grid">
+          <div class="album-photo-row" style="--photo-columns: minmax(0, 12000fr) minmax(0, 9008fr) minmax(0, 5067fr)">
+            <figure>
+              <img src="assets/gallery/2023/photo-1.jpg" width="1000" height="563"
+                   alt="A class gathered in a classroom decorated for Hari Raya" loading="lazy">
+              <figcaption>Hari Raya in the classroom</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/gallery/2023/photo-2.jpg" width="2560" height="1920"
+                   alt="Students and a teacher gathered under the Teratak Bonda shelter" loading="lazy">
+              <figcaption>At Teratak Bonda</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/gallery/2023/photo-3.jpg" width="3024" height="4032"
+                   alt="Friends taking a selfie in the schoolyard near the Ibnu Battutah building" loading="lazy">
+              <figcaption>In the schoolyard</figcaption>
+            </figure>
+          </div>
+          <div class="album-photo-row" style="--photo-columns: minmax(0, 27fr) minmax(0, 48fr) minmax(0, 64fr)">
+            <figure>
+              <img src="assets/gallery/2023/photo-4.jpg" width="3024" height="4032"
+                   alt="Friends in colorful outfits crowding into an outdoor selfie after dark" loading="lazy">
+              <figcaption>An evening group selfie</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/gallery/2023/photo-5.jpg" width="4032" height="3024"
+                   alt="Friends in colorful outfits sitting on a bench in the school courtyard" loading="lazy">
+              <figcaption>On the courtyard bench</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/gallery/2023/photo-6.jpg" width="4032" height="2268"
+                   alt="A group in coordinated light blue outfits gathered indoors" loading="lazy">
+              <figcaption>Together in light blue</figcaption>
+            </figure>
+          </div>
+          <div class="album-photo-row" style="--photo-columns: minmax(0, 12fr) minmax(0, 12fr) minmax(0, 9fr)">
+            <figure>
+              <img src="assets/gallery/2023/photo-7.jpg" width="3024" height="4032"
+                   alt="A group posing in purple and red shirts on a sports court" loading="lazy">
+              <figcaption>At the sports court</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/gallery/2023/photo-8.jpg" width="3024" height="4032"
+                   alt="Friends taking a selfie in the school hall" loading="lazy">
+              <figcaption>Inside the school hall</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/gallery/2023/photo-9.jpg" width="1170" height="2080"
+                   alt="Three group photos of students at outdoor and indoor school activities" loading="lazy">
+              <figcaption>School activities</figcaption>
+            </figure>
+          </div>
+          <div class="album-photo-row" style="--photo-columns: minmax(0, 9fr) minmax(0, 12fr) minmax(0, 12fr)">
+            <figure>
+              <img src="assets/gallery/2023/photo-10.jpg" width="2268" height="4032"
+                   alt="A group posing beneath a Selamat Hari Raya banner" loading="lazy">
+              <figcaption>Selamat Hari Raya</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/gallery/2023/photo-11.jpg" width="3024" height="4032"
+                   alt="Friends in purple shirts taking a selfie outside a classroom" loading="lazy">
+              <figcaption>Outside the classroom</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/gallery/2023/photo-12.jpg" width="3024" height="4032"
+                   alt="Students in school uniforms posing on a stairway" loading="lazy">
+              <figcaption>On the school stairs</figcaption>
+            </figure>
+          </div>
+          <div class="album-photo-row" style="--photo-columns: minmax(0, 3fr) minmax(0, 3fr) minmax(0, 3fr)">
+            <figure>
+              <img src="assets/gallery/2023/photo-13.jpg" width="1920" height="2560"
+                   alt="A group gathered beneath leafy trees" loading="lazy">
+              <figcaption>Together under the trees</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/gallery/2023/photo-14.jpg" width="3024" height="4032"
+                   alt="A person in a light blue outfit leaning in a doorway" loading="lazy">
+              <figcaption>In the doorway</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/gallery/2023/photo-15.jpg" width="3024" height="4032"
+                   alt="Two people standing behind a decorated cake" loading="lazy">
+              <figcaption>A moment by the cake</figcaption>
+            </figure>
+          </div>
+          <div class="album-photo-row" style="--photo-columns: minmax(0, 3fr) minmax(0, 3fr) minmax(0, 3fr)">
+            <figure>
+              <img src="assets/gallery/2023/photo-16.jpg" width="3024" height="4032"
+                   alt="Friends resting on patterned mats" loading="lazy">
+              <figcaption>Taking a break</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/gallery/2023/photo-17.jpg" width="3024" height="4032"
+                   alt="A person walking along the beach against an orange sunset" loading="lazy">
+              <figcaption>Watching the sunset</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/gallery/2023/photo-18.jpg" width="3024" height="4032"
+                   alt="Three people in shallow surf beneath the setting sun" loading="lazy">
+              <figcaption>In the waves at sunset</figcaption>
+            </figure>
+          </div>
+        </div>
+        <a class="pill gallery-close" href="#gallery">Back to Gallery</a>
+      </section>
 
-    <a class="pill contact-link" href="#contact">Contact Me</a>
-  </header>
-      <div class="page-width split-page experience-page">
-    <h2 id="experience-heading" class="section-title">My Experience</h2>
-    <object class="photo " data="assets/experience.jpg" type="image/jpeg" role="img" aria-label="Mohammad Nurhafizan at SMK Inanam"><span class="photo-empty" aria-hidden="true"></span></object>
-    <div class="split-copy">
-      <ul class="experience-list">
-        <li><strong>Website Developer — SMK Inanam</strong><br>I developed the school’s website to make school information easier to find online.</li>
-        <li><strong>ICT Intern — SMK Inanam</strong><br>I gained hands-on experience with IT support, troubleshooting and networking in a school environment.</li>
-      </ul>
-      <p>These experiences helped me apply what I’ve learned in real-world situations and develop a deeper understanding of how technology supports people in their everyday work. They showed me how digital tools can improve efficiency, simplify complex tasks, strengthen communication, and help individuals and organizations solve problems more effectively. Through these opportunities, I also gained greater confidence in adapting to new technologies, working collaboratively, and recognizing the practical impact that technology can have across different environments.</p>
-    </div>
-    <div class="home-actions"><a class="pill" href="#internship-photos">Internship Photos</a><a class="pill" href="#school-website">The Website</a><a class="pill" href="#skills">Skills I Use</a></div>
- <section class="experience-gallery expandable-gallery" id="internship-photos">
-  <h2>Internship Photos</h2>
+      <section class="year-album" id="gallery-2024" aria-labelledby="gallery-heading-2024" tabindex="-1">
+        <h3 id="gallery-heading-2024">2024 Photos</h3>
+        <div class="photo-grid">
+          <figure>
+            <img src="assets/gallery/2024/photo-1.jpg"
+                 alt="Fresh fruit at a market stall" loading="lazy">
+            <figcaption>At the market</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/2024/photo-2.jpg"
+                 alt="Grilled fish, rice and side dishes" loading="lazy">
+            <figcaption>A meal at home</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/2024/photo-3.jpg"
+                 alt="A shaded walkway lined with trees" loading="lazy">
+            <figcaption>A weekend walk</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/2024/photo-4.jpg"
+                 alt="A lit building reflected in a river at dusk" loading="lazy">
+            <figcaption>An evening by the water</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/2024/photo-5.jpg"
+                 alt="Mountain ridges above a layer of clouds" loading="lazy">
+            <figcaption>A trip to the hills</figcaption>
+          </figure>
+        </div>
+        <a class="pill gallery-close" href="#gallery">Back to Gallery</a>
+      </section>
 
-  <div class="internship-photo-grid">
-    <figure>
-      <img src="assets/internship-1.jpg" alt="Internship photo 1" loading="lazy">
-      <figcaption>Write a few words about photo 1 here.</figcaption>
-    </figure>
+      <section class="year-album" id="gallery-2025" aria-labelledby="gallery-heading-2025" tabindex="-1">
+        <h3 id="gallery-heading-2025">2025 Photos</h3>
+        <div class="photo-grid">
+          <figure>
+            <img src="assets/gallery/2025/photo-1.jpg"
+                 alt="Mountain ridges above a layer of clouds" loading="lazy">
+            <figcaption>A trip to the hills</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/2025/photo-2.jpg"
+                 alt="Palm trees beside a beach at sunset" loading="lazy">
+            <figcaption>Sunset at the beach</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/2025/photo-3.jpg"
+                 alt="Fresh fruit at a market stall" loading="lazy">
+            <figcaption>At the market</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/2025/photo-4.jpg"
+                 alt="A shaded walkway lined with trees" loading="lazy">
+            <figcaption>A weekend walk</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/2025/photo-5.jpg"
+                 alt="Grilled fish, rice and side dishes" loading="lazy">
+            <figcaption>A meal at home</figcaption>
+          </figure>
+        </div>
+        <a class="pill gallery-close" href="#gallery">Back to Gallery</a>
+      </section>
 
-    <figure>
-      <img src="assets/internship-2.jpg" alt="Internship photo 2" loading="lazy">
-      <figcaption>Write a few words about photo 2 here.</figcaption>
-    </figure>
-
-    <figure>
-      <img src="assets/internship-3.jpg" alt="Internship photo 3" loading="lazy">
-      <figcaption>Write a few words about photo 3 here.</figcaption>
-    </figure>
-
-    <figure>
-      <img src="assets/internship-4.jpg" alt="Internship photo 4" loading="lazy">
-      <figcaption>Write a few words about photo 4 here.</figcaption>
-    </figure>
-
-    <figure>
-      <img src="assets/internship-5.jpg" alt="Internship photo 5" loading="lazy">
-      <figcaption>Write a few words about photo 5 here.</figcaption>
-    </figure>
-  </div>
-
-  <a class="pill gallery-close" href="#experience">Back to Experience</a>
-</section>
-    </section>
-    <section class="experience-gallery expandable-gallery" id="school-website">
-      <h2>SMK Inanam Website</h2>
-      <object class="website-shot" data="assets/smk-inanam.png" type="image/png" role="img" aria-label="Screenshot of the SMK Inanam website"><span class="photo-empty" aria-hidden="true"></span></object>
-      <a class="pill gallery-close" href="#experience">Back to Experience</a>
-    </section>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="scroll-panel scroll-panel--skills" aria-labelledby="skills-heading">
-      <header class="site-header page-width">
-    <a class="wordmark" href="#home">Nurhafizan</a>
-
-    <nav class="site-nav" aria-label="Skills navigation">
-      <a href="#home">Home</a>
-      <a href="#about">About Me</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills" aria-current="location">Skills</a>
-      <a href="#hobby">Hobby</a>
-    </nav>
-
-    <a class="pill contact-link" href="#contact">Contact Me</a>
-  </header>
-      <div class="page-width gallery-page">
-    <h2 id="skills-heading" class="section-title">My Skills</h3>
-    <div class="tile-grid">
-      <article class="tile">
-        <object class="photo " data="assets/canvalogo.jpeg" type="image/jpeg" role="img" aria-label="Canva App"><span class="photo-empty" aria-hidden="true"></span></object>
-        <div class="tile-copy"><h3>Canva App</h3><p>Making design poster of the school event.</p></div>
-      </article>
-      <article class="tile">
-        <object class="photo " data="assets/claudelogo.png" type="image/jpeg" role="img" aria-label="Claude App"><span class="photo-empty" aria-hidden="true"></span></object>
-        <div class="tile-copy"><h3>Claude App</h3><p>Assisting with research, content creation and coding ideas.</p></div>
-      </article>
-      <article class="tile">
-        <object class="photo " data="assets/exa.png" type="image/jpeg" role="img" aria-label="Exabytes Business Hosting"><span class="photo-empty" aria-hidden="true"></span></object>
-        <div class="tile-copy"><h3>Exabytes Business Hosting</h3><p>I used Exabytes Business Hosting to host the SMK Inanam website and Plesk Obsidian to manage its coding, files, and content, allowing ICT staff to maintain the website after my internship.</p></div>
-      </article>
-      <article class="tile">
-        <object class="photo " data="assets/htmllogo.png" type="image/jpeg" role="img" aria-label="HTML"><span class="photo-empty" aria-hidden="true"></span></object>
-        <div class="tile-copy"><h3>HTML</h3><p>Coding language that i mostly use. simple and easy to use.</p></div>
-      </article>
-      <article class="tile">
-        <object class="photo " data="assets/skill-5.jpg" type="image/jpeg" role="img" aria-label="Networking"><span class="photo-empty" aria-hidden="true"></span></object>
-        <div class="tile-copy"><h3>Networking</h3><p>Understanding how devices connect and share access.</p></div>
-      </article>
-      <article class="tile">
-        <object class="photo " data="assets/skill-6.jpg" type="image/jpeg" role="img" aria-label="Troubleshooting"><span class="photo-empty" aria-hidden="true"></span></object>
-        <div class="tile-copy"><h3>Troubleshooting</h3><p>Working through problems and checking what solves them.</p></div>
-      </article>
-    </div>
-    <div class="home-actions"><a class="pill" href="#experience">My Experience</a><a class="pill" href="#about">About Me</a><a class="pill" href="#contact">Contact Me</a></div>
-      </div>
-    </section>
-
-    <!-- Hobby -->
-    <section id="hobby" class="scroll-panel scroll-panel--hobby" aria-labelledby="hobby-heading">
-      <header class="site-header page-width">
-    <a class="wordmark" href="#home">Nurhafizan</a>
-
-    <nav class="site-nav" aria-label="Hobby navigation">
-      <a href="#home">Home</a>
-      <a href="#about">About Me</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#hobby" aria-current="location">Hobby</a>
-    </nav>
-
-    <a class="pill contact-link" href="#contact">Contact Me</a>
-  </header>
-      <div class="page-width gallery-page">
-    <h2 id="hobby-heading" class="section-title">My Hobby</h3>
-    <div class="tile-grid">
-      <article class="tile">
-        <object class="photo " data="assets/cooking1.jpg" type="image/jpeg" role="img" aria-label="Home Cooking"><span class="photo-empty" aria-hidden="true"></span></object>
-        <div class="tile-copy"><h3>Home Cooking</h3><p>A meal from my kitchen.</p></div>
-      </article>
-      <article class="tile">
-        <object class="photo " data="assets/cooking2.jpg" type="image/jpeg" role="img" aria-label="Home Cooking"><span class="photo-empty" aria-hidden="true"></span></object>
-        <div class="tile-copy"><h3>Home Cooking</h3><p>Another dish I made at home.</p></div>
-      </article>
-      <article class="tile">
-        <object class="photo " data="assets/cooking3.jpg" type="image/jpeg" role="img" aria-label="Home Cooking"><span class="photo-empty" aria-hidden="true"></span></object>
-        <div class="tile-copy"><h3>Home Cooking</h3><p>A recipe I tried.</p></div>
-      </article>
-      <article class="tile">
-        <object class="photo " data="assets/cooking4.jpg" type="image/jpeg" role="img" aria-label="Home Cooking"><span class="photo-empty" aria-hidden="true"></span></object>
-        <div class="tile-copy"><h3>Home Cooking</h3><p>A homemade meal.</p></div>
-      </article>
-      <article class="tile">
-        <object class="photo " data="assets/cooking5.jpg" type="image/jpeg" role="img" aria-label="Home Cooking"><span class="photo-empty" aria-hidden="true"></span></object>
-        <div class="tile-copy"><h3>Home Cooking</h3><p>Something I cooked at home.</p></div>
-      </article>
-      <article class="tile">
-        <object class="photo " data="assets/cooking6.jpg" type="image/jpeg" role="img" aria-label="Home Cooking"><span class="photo-empty" aria-hidden="true"></span></object>
-        <div class="tile-copy"><h3>Home Cooking</h3><p>Another moment from my kitchen.</p></div>
-      </article>
-    </div>
-    <div class="home-actions"><a class="pill" href="#about">About Me</a><a class="pill" href="#home">Home</a><a class="pill" href="#contact">Contact Me</a></div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="scroll-panel scroll-panel--contact" aria-labelledby="contact-heading">
-      <header class="site-header page-width">
-    <a class="wordmark" href="#home">Nurhafizan</a>
-
-    <nav class="site-nav" aria-label="Contact navigation">
-      <a href="#home">Home</a>
-      <a href="#about">About Me</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#hobby">Hobby</a>
-    </nav>
-
-    <a class="pill contact-link" href="#contact" aria-current="location">Contact Me</a>
-  </header>
-      <div class="page-width gallery-page contact-page">
-    <h2 id="contact-heading" class="section-title">Contact Me</h3>
-    <div class="tile-grid">
-      <article class="tile">
-        <object class="photo " data="assets/contact-email.jpg" type="image/jpeg" role="img" aria-label="Email"><span class="photo-empty" aria-hidden="true"></span></object>
-        <div class="tile-copy"><h3>Email</h3><p>Coming soon.</p></div>
-      </article>
-      <article class="tile">
-        <object class="photo " data="assets/contact-linkedin.jpg" type="image/jpeg" role="img" aria-label="LinkedIn"><span class="photo-empty" aria-hidden="true"></span></object>
-        <div class="tile-copy"><h3>LinkedIn</h3><p>Coming soon.</p></div>
-      </article>
-      <article class="tile">
-        <object class="photo " data="assets/contact-social.jpg" type="image/jpeg" role="img" aria-label="Social Media"><span class="photo-empty" aria-hidden="true"></span></object>
-        <div class="tile-copy"><h3>Social Media</h3><p>Coming soon.</p></div>
-      </article>
-    </div>
-      </div>
+      <section class="year-album" id="gallery-2026" aria-labelledby="gallery-heading-2026" tabindex="-1">
+        <h3 id="gallery-heading-2026">2026 Photos</h3>
+        <div class="photo-grid">
+          <figure>
+            <img src="assets/gallery/2026/photo-1.jpg"
+                 alt="A lit building reflected in a river at dusk" loading="lazy">
+            <figcaption>An evening by the water</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/2026/photo-2.jpg"
+                 alt="Fresh fruit at a market stall" loading="lazy">
+            <figcaption>At the market</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/2026/photo-3.jpg"
+                 alt="Mountain ridges above a layer of clouds" loading="lazy">
+            <figcaption>A trip to the hills</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/2026/photo-4.jpg"
+                 alt="Palm trees beside a beach at sunset" loading="lazy">
+            <figcaption>Sunset at the beach</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/gallery/2026/photo-5.jpg"
+                 alt="A shaded walkway lined with trees" loading="lazy">
+            <figcaption>A weekend walk</figcaption>
+          </figure>
+        </div>
+        <a class="pill gallery-close" href="#gallery">Back to Gallery</a>
+      </section>
     </section>
   </main>
 </body>
