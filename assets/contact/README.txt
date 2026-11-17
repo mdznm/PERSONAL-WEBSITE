@@ -1,4 +1,4 @@
-Add JPEG pictures to this folder using these names:
-contact-email.jpg
-contact-linkedin.jpg
-contact-social.jpg
+Contact logos used by contact.html:
+contact-whatsapp.png
+contact-linkedin.webp
+contact-social.webp

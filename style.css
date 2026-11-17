@@ -42,13 +42,13 @@ a:focus-visible { outline: 2px solid #101010; outline-offset: 4px; }
 .wordmark {
   justify-self: start;
   padding-left: 8px;
-  width: 148px;
-}
-
-.wordmark img {
-  display: block;
-  width: 100%;
-  height: auto;
+  width: max-content;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
 }
 
 .site-nav {
@@ -139,7 +139,7 @@ a:focus-visible { outline: 2px solid #101010; outline-offset: 4px; }
 @media (max-width: 1050px) {
   .site-header { grid-template-columns: auto 1fr auto; }
   .site-nav { gap: 4px 14px; }
-  .wordmark { width: 124px; padding-left: 0; }
+  .wordmark { padding-left: 0; }
   .contact-link { min-width: 0; }
 }
 
@@ -238,6 +238,7 @@ a:focus-visible { outline: 2px solid #101010; outline-offset: 4px; }
 .tile-copy h2 { margin: 0 0 8px; font-size: clamp(15px, 1.4vw, 19px); }
 .tile-copy p { margin: 0; font-size: 14px; line-height: 1.45; }
 .contact-page .tile-grid { margin-top: clamp(42px, 8vw, 110px); }
+.contact-page .photo { object-fit: contain; }
 
 @media (min-width: 1021px) {
   .tile:nth-child(n+4) { padding-top: 22px; border-top: 1px solid #d5d5d5; }
