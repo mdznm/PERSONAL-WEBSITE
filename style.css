@@ -269,6 +269,10 @@ a:focus-visible { outline: 2px solid #101010; outline-offset: 4px; }
 }
 
 /* Gallery immediately below the homepage introduction */
+/* Fragment navigation focuses these containers without drawing a frame. */
+.memory-gallery:focus,
+.year-album:focus { outline: none; }
+
 .memory-gallery {
   margin-block: clamp(16px, 2vw, 26px) clamp(24px, 5vw, 64px);
   padding: clamp(32px, 4.5vw, 64px) clamp(18px, 4vw, 60px);
