@@ -10,6 +10,6 @@ About: about/about.jpg. Put resume.pdf directly in assets/.
 Experience: use experience/experience.jpg and experience/smk-inanam.png. Internship photos go in internship/ as internship-1.jpg through internship-5.jpg.
 Skills: use skills/ for canvalogo.jpeg, claudelogo.png, exa.png, htmllogo.png, skill-5.jpg and skill-6.jpg.
 Interest: put cooking1.jpg through cooking6.jpg in interest/.
-Contact: put contact-email.jpg, contact-linkedin.jpg and contact-social.jpg in contact/.
+Contact: put contact-whatsapp.png, contact-linkedin.webp and contact-social.webp in contact/.
 
 The grey spaces are placeholders until your files are added. Edit the captions and contact details in the corresponding HTML files.
