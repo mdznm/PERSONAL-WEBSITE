@@ -686,8 +686,10 @@ img[src="assets/gallery/2026/photo-5.jpg"] { object-position: 50% 50%; }
 /* Music collections retain the existing interest-page typography. */
 .music-playlist-grid { column-gap: 44px; }
 .music-playlist-link,
-.music-artist-link { display: block; }
-.interest-example img.music-artist-cover {
+.music-artist-link,
+.music-album-link { display: block; }
+.interest-example img.music-artist-cover,
+.interest-example img.music-album-cover {
   aspect-ratio: 1;
   object-fit: contain;
   background: #f0f0f0;
