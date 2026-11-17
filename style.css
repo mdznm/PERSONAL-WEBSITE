@@ -239,6 +239,11 @@ a:focus-visible { outline: 2px solid #101010; outline-offset: 4px; }
 .tile-copy p { margin: 0; font-size: 14px; line-height: 1.45; }
 .contact-page .tile-grid { margin-top: clamp(42px, 8vw, 110px); }
 .contact-page .photo { object-fit: contain; }
+.contact-profile-link {
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
 
 @media (min-width: 1021px) {
   .tile:nth-child(n+4) { padding-top: 22px; border-top: 1px solid #d5d5d5; }
