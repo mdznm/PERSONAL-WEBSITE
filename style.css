@@ -409,7 +409,7 @@ img[src="assets/gallery/2022/photo-4.webp"] { object-position: 50% 50%; }
 img[src="assets/gallery/2022/photo-5.webp"] { object-position: 50% 50%; }
 
 /* 2023 */
-img[src="assets/gallery/2023/cover.jpg"]   { object-position: 50% 50%; }
+img[src="assets/gallery/2023/cover.jpg"]   { object-fit: contain; object-position: 50% 50%; }
 img[src="assets/gallery/2023/photo-1.jpg"] { object-position: 50% 50%; }
 img[src="assets/gallery/2023/photo-2.jpg"] { object-position: 50% 50%; }
 img[src="assets/gallery/2023/photo-3.webp"] { object-position: 50% 50%; }
